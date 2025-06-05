@@ -12,17 +12,120 @@
 @gray: #6c757d;
 @gray-dark: #343a40;
 
- .style {
-    background: @pink;
- }
+@primary-color: rgb(207, 67, 79);
+@text-color: rgb(22, 21, 22);
+@highlight-color: rgb(182, 50, 50);
+@bg-light: rgb(234, 231, 231);
 
- .container {  // container is outer most class
-    h1 {
-       font-size: 25px;
-       color:#E45456;
+* {
+  box-sizing: border-box !important;
+  transition: ease all 0.5s;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  color: @highlight-color;
+  font-size: 18px;
+  font-family: Poppins;
+  line-height: 1.80857;
+  font-weight: normal;
+  overflow-x: hidden;
+}
+
+.about_main {
+  .collection_section {
+    width: 100%;
+    float: left;
+    margin-top: 40px;
+
+    .container {
+      .new_text,
+      .consectetuer_text {
+        width: 100%;
+        float: left;
+        font-size: 1.2em;
+        color: @text-color;
+      }
+
+      .consectetuer_text {
+        font-weight: 400;
+        margin-left: 0;
+        padding-bottom: 30px;
+      }
     }
-    p {
-       font-size: 25px;
-       color:#3C7949;
+  }
+
+  .collection_section_3 {
+    width: 100%;
+    float: left;
+    padding-top: 0;
+
+    .container {
+      .racing_shoes {
+        width: 100%;
+        float: left;
+        background-color: @bg-light;
+        padding: 100px 0;
+        margin-bottom: 100px;
+
+        .shoes-img3 {
+          width: 100%;
+          float: left;
+          text-align: center;
+
+          img {
+            margin-top: 4em;
+            width: 70%;
+          }
+        }
+
+        .sale_text {
+          width: 100%;
+          float: left;
+          color: @primary-color;
+          line-height: 1.75em;
+        }
+
+        .number_text {
+          width: 100%;
+          float: left;
+          font-size: 3em;
+          color: @primary-color;
+          line-height: 1.75em;
+        }
+
+        .seemore {
+          width: 80%;
+          height: 50px;
+          color: @white;
+          background-color: @primary-color;
+          font-size: 1.7em;
+          margin-top: 30px;
+        }
+      }
     }
-   }
+  }
+}
+
+.collection_text {
+  width: 100%;
+  float: left;
+  color: @white;
+  text-align: center;
+  font-family: 'Syncopate', sans-serif;
+  font-weight: bold;
+  font-size: 3em;
+  background-color: @primary-color;
+  padding: 30px 0;
+}
+
+.copyright {
+  width: 100%;
+  float: left;
+  font-size: 18px;
+  color: @white;
+  text-align: center;
+  background-color: @primary-color;
+  font-family: Poppins;
+}

@@ -1,17 +1,40 @@
-@blue: #007bff;
-@indigo: #6610f2;
-@purple: #6f42c1;
-@pink: #e83e8c;
-@red: #dc3545;
-@orange: #fd7e14;
-@yellow: #ffc107;
-@green: #28a745;
-@teal: #20c997;
-@cyan: #17a2b8;
-@white: #fff;
-@gray: #6c757d;
-@gray-dark: #343a40;
+// Responsive breakpoints
+@xs: ~"(max-width: 575px)";
+@sm: ~"(min-width: 576px) and (max-width: 767px)";
+@md: ~"(min-width: 768px) and (max-width: 991px)";
+@lg: ~"(min-width: 992px) and (max-width: 1199px)";
 
- .style {
-    background: @pink;
- }
+// Mixin for reuse
+.responsive-styles(@seemore-bt-width, @seemore-width, @font-size, @padding-left: null, @padding-right: null) {
+  .seemore_bt {
+    width: @seemore-bt-width;
+  }
+  .seemore {
+    width: @seemore-width;
+  }
+  .sale_text {
+    font-size: @font-size;
+  }
+  .racing_shoes {
+    .when (@padding-left ！= null) {
+      padding-left: @padding-left;
+    }
+    .when (@padding-right ！= null) {
+      padding-right: @padding-right;
+    }
+  }
+}
+
+// Apply media queries using the mixin
+@media @xs {
+  .responsive-styles(35%, 40%, 2.5em, 30px, 30px);
+}
+@media @sm {
+  .responsive-styles(35%, 40%, 2.5em, 30px, 30px);
+}
+@media @md {
+  .responsive-styles(45%, 80%, 2.5em, null, 50px);
+}
+@media @lg {
+  .responsive-styles(45%, 80%, 2.5em, null, 50px);
+}
